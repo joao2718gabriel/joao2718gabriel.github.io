@@ -57,10 +57,11 @@ img {
   }
 
   .coluna-esquerda, .coluna-direita {
-    width: 100%; 
+    width: 100% !important; 
   }
 
   .box1 {
     max-width: 100%; 
   }
+
 }
