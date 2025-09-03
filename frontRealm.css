@@ -1,43 +1,66 @@
-.card1{
-    background-color: rgb(12, 92, 74);
-    color: rgb(187, 255, 0);
-    text-align: center;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+.card1 {
+  background-color: rgb(12, 92, 74);
+  color: rgb(187, 255, 0);
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
-.card2{
-    background-color: rgba(6, 46, 13, 0.733);
+.card2 {
+  background-color: rgba(6, 46, 13, 0.733);
 }
 
-.box1{
-    background-color: rgb(2, 2, 61);
-    color: gold;
-    width: 250px ;
+.box1 {
+  background-color: rgb(2, 2, 61);
+  color: gold;
+  width: 100%;   
+  max-width: 300px; 
+  padding: 10px;
+  border-radius: 8px;
 }
 
-.box2{
-    background-color: rgb(46, 129, 224);
-    color: rgb(141, 155, 17);
+.box2 {
+  text-align: center;
+  background-color: rgb(79, 35, 121);
+  color: rgb(233, 218, 8);
+  padding: 10px;
+  border-radius: 8px;
 }
 
- .container-pai {
-      display: flex; /* Faz os elementos filhos ficarem em linha */
-      width: 100%; /* Opcional: para a div pai ocupar toda a largura */
-    }
+.container-pai {
+  display: flex; 
+  width: 100%;  
+  gap: 20px; 
+}
 
-    .coluna-esquerda {
-      width: 25%; /* Cada coluna com metade da largura */
-      /* Outros estilos para a coluna */
-    }
+.coluna-esquerda {
+  width: 25%;
+}
 
-    .coluna-direita {
-      width: 75%; /* Cada coluna com metade da largura */
-      /* Outros estilos para a coluna */
-    }
+.coluna-direita {
+  width: 75%;
+}
 
-    .box2{
-        text-align:center;
-        background-color: rgb(79, 35, 121);
-        color: rgb(233, 218, 8);
-    }
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* --- RESPONSIVIDADE --- */
+
+/* Até 768px (celulares/tablets) */
+@media (max-width: 768px) {
+  .container-pai {
+    flex-direction: column-reverse; /* agora o mapa vem primeiro */
+    align-items: center;
+  }
+
+  .coluna-esquerda, .coluna-direita {
+    width: 100%; 
+  }
+
+  .box1 {
+    max-width: 100%; 
+  }
+}
